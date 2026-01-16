@@ -23,7 +23,7 @@ RUN sed -ri "s!/var/www/html!${APACHE_DOCUMENT_ROOT}!g" /etc/apache2/sites-avail
 
 # Copy your application code
 # (Assumes your app is in the same directory as this Dockerfile)
-COPY var/www/html /var/www/html
+COPY . /var/www/html
 
 # Permissions (adjust user/group if needed)
 RUN chown -R www-data:www-data /var/www/html
